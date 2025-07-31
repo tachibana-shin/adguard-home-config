@@ -1,4 +1,4 @@
-Ghttp:
+http:
   pprof:
     port: 6060
     enabled: false
@@ -107,7 +107,7 @@ filters:
     url: https://adguardteam.github.io/HostlistsRegistry/assets/filter_1.txt
     name: AdGuard DNS filter
     id: 1
-  - enabled: false
+  - enabled: true
     url: https://adguardteam.github.io/HostlistsRegistry/assets/filter_2.txt
     name: AdAway Default Blocklist
     id: 2
@@ -139,10 +139,6 @@ filters:
     url: https://adguardteam.github.io/HostlistsRegistry/assets/filter_49.txt
     name: HaGeZi's Ultimate Blocklist
     id: 1753929857
-  - enabled: true
-    url: https://adguardteam.github.io/HostlistsRegistry/assets/filter_51.txt
-    name: HaGeZi's Pro++ Blocklist
-    id: 1753929858
   - enabled: true
     url: https://adguardteam.github.io/HostlistsRegistry/assets/filter_5.txt
     name: OISD Blocklist Small
@@ -176,7 +172,10 @@ filters:
     name: Scam Blocklist by DurableNapkin
     id: 1753929866
 whitelist_filters: []
-user_rules: []
+user_rules:
+  - '@@||b-graph.facebook.com^$important'
+  - '@@||graph.facebook.com^$important'
+  - ""
 dhcp:
   enabled: false
   interface_name: ""
