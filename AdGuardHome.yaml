@@ -6,7 +6,7 @@ http:
   session_ttl: 720h
 users:
   - name: admin
-    password: $2a$10$G9yOr1w2xKWBUkNdm9.cN.9HQDZMPdB70vUAohk9xRbP7gVLwkG5m
+    password: $2y$10$ksCp29mh5De.x2S56F6ZFO7sVMvkQF5VmOsRH0uyvYrxf//lUZygu
 auth_attempts: 5
 block_auth_min: 15
 http_proxy: ""
@@ -23,10 +23,8 @@ dns:
   ratelimit_whitelist: []
   refuse_any: true
   upstream_dns:
-    - 1.1.1.1
-    - https://dns10.quad9.net/dns-query
     - https://dns.google/dns-query
-    - https://cloudflare-dns.com/dns-query
+    - https://dns.cloudflare.com/dns-query
   upstream_dns_file: ""
   bootstrap_dns:
     - 1.1.1.1
@@ -47,6 +45,7 @@ dns:
   trusted_proxies:
     - 127.0.0.0/8
     - ::1/128
+  cache_enabled: true
   cache_size: 4194304
   cache_ttl_min: 0
   cache_ttl_max: 0
@@ -100,7 +99,7 @@ querylog:
 statistics:
   dir_path: ""
   ignored: []
-  interval: 24h
+  interval: 365h
   enabled: true
 filters:
   - enabled: true
@@ -171,6 +170,26 @@ filters:
     url: https://adguardteam.github.io/HostlistsRegistry/assets/filter_10.txt
     name: Scam Blocklist by DurableNapkin
     id: 1753929866
+  - enabled: true
+    url: https://raw.githubusercontent.com/uBlockOrigin/uAssets/master/filters/filters.txt
+    name: uBlock filters - Default
+    id: 1755777733
+  - enabled: true
+    url: https://raw.githubusercontent.com/nextdns/native-tracking-domains/main/domains/xiaomi
+    name: NextDNS Privacy - Xiaomi
+    id: 1755777734
+  - enabled: true
+    url: https://adguardteam.github.io/HostlistsRegistry/assets/filter_55.txt
+    name: HaGeZi's Badware Hoster Blocklist
+    id: 1755777735
+  - enabled: true
+    url: https://adguardteam.github.io/HostlistsRegistry/assets/filter_30.txt
+    name: Phishing URL Blocklist (PhishTank and OpenPhish)
+    id: 1755777736
+  - enabled: true
+    url: https://raw.githubusercontent.com/nextdns/native-tracking-domains/main/domains/windows
+    name: NextDNS Privacy - Windows
+    id: 1755777737
 whitelist_filters: []
 user_rules:
   - '@@||b-graph.facebook.com^$important'
@@ -247,4 +266,4 @@ os:
   group: ""
   user: ""
   rlimit_nofile: 0
-schema_version: 29
+schema_version: 30
