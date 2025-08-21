@@ -99,7 +99,7 @@ querylog:
 statistics:
   dir_path: ""
   ignored: []
-  interval: 365h
+  interval: 8760h
   enabled: true
 filters:
   - enabled: true
