@@ -76,7 +76,7 @@ dns:
     enabled: true
 tls:
   enabled: false
-  server_name: adguard.com
+  server_name: adguard.org
   force_https: false
   port_https: 444
   port_dns_over_tls: 853
@@ -243,7 +243,7 @@ filtering:
   blocked_response_ttl: 10
   filtering_enabled: true
   parental_enabled: false
-  safebrowsing_enabled: false
+  safebrowsing_enabled: true
   protection_enabled: true
 clients:
   runtime_sources:
@@ -316,7 +316,7 @@ clients:
       ignore_querylog: false
       ignore_statistics: false
     - safe_search:
-        enabled: false
+        enabled: true
         bing: true
         duckduckgo: true
         ecosia: true
@@ -339,10 +339,10 @@ clients:
       uid: 019908f8-ee3d-7708-80af-72b1b7d794ad
       upstreams_cache_size: 0
       upstreams_cache_enabled: false
-      use_global_settings: true
-      filtering_enabled: false
+      use_global_settings: false
+      filtering_enabled: true
       parental_enabled: false
-      safebrowsing_enabled: false
+      safebrowsing_enabled: true
       use_global_blocked_services: true
       ignore_querylog: false
       ignore_statistics: false
