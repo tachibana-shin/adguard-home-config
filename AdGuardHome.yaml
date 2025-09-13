@@ -178,7 +178,7 @@ filters:
     url: https://raw.githubusercontent.com/nextdns/native-tracking-domains/main/domains/xiaomi
     name: NextDNS Privacy - Xiaomi
     id: 1755777734
-  - enabled: false
+  - enabled: true
     url: https://adguardteam.github.io/HostlistsRegistry/assets/filter_55.txt
     name: HaGeZi's Badware Hoster Blocklist
     id: 1755777735
