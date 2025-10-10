@@ -194,7 +194,9 @@ whitelist_filters: []
 user_rules:
   - '@@||b-graph.facebook.com^$important'
   - '@@||graph.facebook.com^$important'
-  - ""
+  - '@@||ads.tiktok.com^$important'
+  - '@@||p21-ad-sg.ibyteimg.com^$important'
+
 dhcp:
   enabled: false
   interface_name: ""
